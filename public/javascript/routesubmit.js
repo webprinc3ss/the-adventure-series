@@ -23,9 +23,9 @@ async function routeSubmitFormHandler(event) {
                 ride_link,
                 photo,
             }),
-            headers: {'Content-Type': 'application/json'}
+            headers: { 'Content-Type': 'application/json' }
         });
-        if (response.ok){
+        if (response.ok) {
             console.log("Ride submitted");
             document.location.reload();
         } else {

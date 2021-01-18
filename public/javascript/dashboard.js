@@ -37,3 +37,15 @@ function showFileName(event) {
     var fileName = input.files[0].name;
     infoArea.textContent = 'File name: ' + fileName;
 }
+
+// Render Blob image
+var myImage = document.getElementById('routesPhoto');
+
+fetch('/api/user-routes/:id.photo').then(function (response) {
+    return response.blob();
+}).then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+});
+
+
