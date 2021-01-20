@@ -25,13 +25,15 @@ body {
   height: 100%;
 }
 
-  
-
 /* NAV STYLES START HERE */
 .race-icon {
-  height:2.2em;
+  /* height:1.1em;
+  width: 1.1em; */
+  position: absolute;
+    top: 40%;
+    width: 50%;
+    left: 25%;   
 }
-
 
 /* Basic styling */
 * {
@@ -39,9 +41,6 @@ box-sizing: border-box;
 padding: 0;
 margin: 0;
 }
-
-
-
 
 header {
   height:80px;
@@ -140,7 +139,6 @@ display: none;
 display: block;
 line-height: 30px; 
 }
-
 
 .has-submenu i {
 font-size: 12px;
@@ -657,6 +655,39 @@ ul.normal {
 ul.no-dot {
   list-style-type: none;
 }
+
+/* ICON ANIMATION */
+
+.animate {
+  /* height: 2.2em; */
+  /* width: 50px;
+  
+  background-color: none; */
+  /* background-image: url(/images/bicycle-race-1.png); */
+
+}
+
+.race-icon {
+  /* height:1.1em;
+  width: 1.1em; */
+  height: 2.2em;
+  width: 2.4em;
+  top: 1;
+  margin-bottom: 10px;
+  left:300px;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+@keyframes example {
+  0%   {background-image: url(/images/bicycle-race-1.png); left:-200px; top:1;}
+  /* 25%  {background-image: url(/images/bicycle-race-1.png); left:50px; top:0px;} */
+  100%  {background-image: url(/images/bicycle-race-1.png); left:300px; top:1;}
+  /* 75%  {background-image: url(/images/bicycle-race-1.png); left:0px; top:200px;}
+  100% {background-image: url(/images/bicycle-race-1.png); left:0px; top:0px;} */
+}
+
 
 /* MOBILE RESPONSIVE MEDIA QUERIES */
 
